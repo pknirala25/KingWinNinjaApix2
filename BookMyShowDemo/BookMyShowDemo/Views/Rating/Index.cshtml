@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BookMyShowDemo.Models.RatingModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Rating List</h1>
+
+@Html.ActionLink("Give Rating" , "CreateRating")
+
+<table>
+    <thead>
+        <tr>
+            <th>RatingId</th>
+            <th>MovieId</th>
+            <th>Rating Number</th>
+            <th>RatingComment</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(obj => item.MovieId)</td>
+            
+            <td>@Html.DisplayFor(obj => item.RatingId)</td>
+            <td>@Html.DisplayFor(obj => item.RatingNumber)</td>
+            <td>@Html.DisplayFor(obj => item.RatingComment)</td>
+            <td>@Html.ActionLink("Edit", "EditRating", new { id = item.RatingId })</td>
+            <td>@Html.ActionLink("Delete", "DeleteRating", new { id = item.RatingId})</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+

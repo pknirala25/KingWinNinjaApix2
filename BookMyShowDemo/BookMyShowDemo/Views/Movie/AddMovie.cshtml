@@ -1,0 +1,43 @@
+﻿@model BookMyShowDemo.Models.MovieModel
+@{
+    ViewData["Title"] = "AddMovie";
+}
+
+<h1>Add Movie</h1>
+
+<div class="row">
+
+    @using (Html.BeginForm())
+    {
+    <div class="col-12">
+        @*<div class="form-group">
+            <label for="LocationId">
+                @Html.DisplayNameFor(locationobj => locationobj.LocationId)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.LocationId)
+
+        </div>*@
+        <div class="form-group">
+            <label for="MovieName">
+                @Html.DisplayNameFor(locationobj => locationobj.MovieName)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.MovieName)
+        </div>
+        <div class="form-group">
+            <label for="Language">
+                @Html.DisplayNameFor(locationobj => locationobj.Language)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.Language)
+        </div>
+        <div class="form-group">
+            <label for="Type">
+                @Html.DisplayNameFor(locationobj => locationobj.Type)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.Type)
+        </div>
+        <input type="submit" value="Save Movie" />
+        <input type="button" value="Cancel" />
+    </div>
+
+    }
+</div>

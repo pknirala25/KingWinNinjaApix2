@@ -1,0 +1,43 @@
+﻿@model BookMyShowDemo.Models.RatingModel
+@{
+    ViewData["Title"] = "EditRating";
+}
+
+<h1>Edit Rating</h1>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="col-12">
+            <div class="form-group">
+                <label for="RatingId">
+                    @Html.DisplayNameFor(locationobj => locationobj.RatingId)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.RatingId)
+
+            </div>
+            <div class="form-group">
+                <label for="RatingNumber">
+                    @Html.DisplayNameFor(locationobj => locationobj.RatingNumber)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.RatingNumber)
+            </div>
+            @*<div class="form-group">
+                <label for="Language">
+                    @Html.DisplayNameFor(locationobj => locationobj.MovieId)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.MovieId)
+            </div>*@
+            <div class="form-group">
+                <label for="RatingComment">
+                    @Html.DisplayNameFor(locationobj => locationobj.RatingComment)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.RatingComment)
+            </div>
+            <input type="submit" value="Save Rating" />
+            <input type="button" value="Cancel" />
+        </div>
+    }
+</div>
+
+

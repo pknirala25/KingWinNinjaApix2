@@ -1,0 +1,26 @@
+﻿@model BookMyShowDemo.Models.TheatreModel
+@{
+    ViewData["Title"] = "CreateTheatre";
+}
+
+<h1>Create Theatre</h1>
+
+<hr />
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="col-12">
+            
+            <div class="form-group">
+                <label for="Theatre">
+                    @Html.DisplayNameFor(theatreobj => theatreobj.Theatre)
+                </label>
+                @Html.TextBoxFor(theatreobj => theatreobj.Theatre)
+            </div>
+            <input type="submit" value="Save Theatre" />
+            <input type="button" value="Reset" />
+        </div>
+    }
+</div>
+
+

@@ -1,0 +1,30 @@
+﻿@model BookMyShowDemo.Models.TheatreModel
+@{
+    ViewData["Title"] = "DeleteTheatre";
+}
+
+<h1>DeleteTheatre</h1>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="col-12">
+            <div class="form-group">
+                <label for="TheatreId">
+                    @Html.DisplayNameFor(theatreobj => theatreobj.TheatreId)
+                </label>
+                @Html.TextBoxFor(theatreobj => theatreobj.TheatreId)
+
+            </div>
+            <div class="form-group">
+                <label for="Theatre">
+                    @Html.DisplayNameFor(theatreobj => theatreobj.Theatre)
+                </label>
+                @Html.TextBoxFor(theatreobj => theatreobj.Theatre)
+            </div>
+            <input type="submit" value="Delete Theatre" />
+            <input type="button" value="Cancel" />
+        </div>
+    }
+</div>
+

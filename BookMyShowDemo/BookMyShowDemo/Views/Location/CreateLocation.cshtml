@@ -1,0 +1,30 @@
+﻿@model BookMyShowDemo.Models.LocationModel
+@{
+    ViewData["Title"] = "CreateLocation";
+}
+
+<h1>Create Location</h1>
+<hr />
+<div class="row">
+    @using (Html.BeginForm())
+    {
+    <div class="col-12">
+        @*<div class="form-group">
+            <label for="LocationId">
+                @Html.DisplayNameFor(locationobj => locationobj.LocationId)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.LocationId)
+
+        </div>*@
+        <div class="form-group">
+            <label for="Location">
+                @Html.DisplayNameFor(locationobj => locationobj.Location)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.Location)
+        </div>
+        <input type="submit" value="Save Location" />
+        <input type="button" value="Reset" />
+        </div>
+    }
+    </div>
+

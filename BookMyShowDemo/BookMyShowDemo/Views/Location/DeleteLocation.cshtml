@@ -1,0 +1,28 @@
+﻿@model BookMyShowDemo.Models.LocationModel
+@{
+    ViewData["Title"] = "DeleteLocation";
+}
+
+<h1>Delete Location</h1>
+
+@using (Html.BeginForm())
+{
+    <div class="col-12">
+        <div class="form-group">
+            <label for="LocationId">
+                @Html.DisplayNameFor(locationobj => locationobj.LocationId)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.LocationId)
+
+        </div>
+        <div class="form-group">
+            <label for="Location">
+                @Html.DisplayNameFor(locationobj => locationobj.Location)
+            </label>
+            @Html.TextBoxFor(locationobj => locationobj.Location)
+        </div>
+        <input type="submit" value="Delete Location" />
+        <input type="button" value="Cancel" />
+    </div>
+}
+

@@ -1,0 +1,42 @@
+﻿@model BookMyShowDemo.Models.RatingModel
+@{
+    ViewData["Title"] = "DeleteRating";
+}
+
+<h1>Delete Rating</h1>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        <div class="col-12">
+            <div class="form-group">
+                <label for="RatingId">
+                    @Html.DisplayNameFor(locationobj => locationobj.RatingId)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.RatingId)
+
+            </div>
+            <div class="form-group">
+                <label for="RatingNumber">
+                    @Html.DisplayNameFor(locationobj => locationobj.RatingNumber)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.RatingNumber)
+            </div>
+            <div class="form-group">
+                <label for="RatingComment">
+                    @Html.DisplayNameFor(locationobj => locationobj.RatingComment)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.RatingComment)
+            </div>
+            @*<div class="form-group">
+                <label for="MovieId">
+                    @Html.DisplayNameFor(locationobj => locationobj.MovieId)
+                </label>
+                @Html.TextBoxFor(locationobj => locationobj.MovieId)
+            </div>*@
+            <input type="submit" value="Delete Rating" />
+            <input type="button" value="Cancel" />
+        </div>
+    }
+</div>
+
